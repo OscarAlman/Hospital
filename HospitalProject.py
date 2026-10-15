@@ -6,18 +6,23 @@ class Hospital:
     def add_employee(self,employee):
         self.employees.append(employee)
 
-class Employees:
+class Employee:
     def __init__(self,parameterName):
         self.name=parameterName
     
     
-class Doctors(Employees):
+class Doctor(Employee):
     def __init__(self,parameterName,parameterSpecialty):
         super().__init__(parameterName)
         self.specialty=parameterSpecialty    
 
-george=Hospital("George", ["Dr. Smith", "Nurse Joy", "Dr. Adams"])
-        
+
+drSmith= Doctor(parameterName="Dr Smith",parameterSpecialty="Neuro")
+drJones= Doctor(parameterName="Mr Jones",parameterSpecialty="HeartSurgeon")
+                
+george=Hospital("St Georges Hospital", [drSmith, drJones])
+
+drDave = Doctor(parameterName="Mr Dave",parameterSpecialty="TraumaSurgeon")
 print(george.name) 
-george.add_employee("Dr. Brown")
+george.add_employee(drDave)
 print(george.employees) 
