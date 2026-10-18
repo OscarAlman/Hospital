@@ -114,7 +114,7 @@ myHospital.add_employee(william) #this is calling the add_employee method of the
 
 
 #TODO 👍 Create another subclass for Nurse
-#TOTO add age to the base class , as both burses and Drs have age
+#TOTO 👍 add age to the top class , as both nurses and Drs have age
 #TODO 🥳 Add a function at the hostpital class, to return the count of employees
 #TODO 🥳 Add a function at the hostpital class, to return the count of Drs
 #TODO 🥳 Add a function at the hostpital class, to return the count of Nurses
@@ -123,7 +123,7 @@ myHospital.add_employee(william) #this is calling the add_employee method of the
 #TODO 🥳 search for a doctor by name. The search should ignore capitals (“smith” matches “Smith”), only match doctors, and give back the doctor if found or None if not.
 #TODO 🥳 Every method needs a docstring explaining what it does.
 #TODO 🥳 use __str__ so when you do print(drDave) it prints something human readable
-#TODO .... for extra points use  __repr__   so when you print(employees)  it prints somethings useful
+#TODO .... for extra points use  __repr__   so when you print(employees)  it prints somethings comparable to obecjts
 
 
 
