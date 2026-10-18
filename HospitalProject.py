@@ -112,20 +112,7 @@ myHospital.add_employee(malachi) #this is calling the add_employee method of the
 myHospital.add_employee(william) #this is calling the add_employee method of the Hospital class, and passing in the employee object as an argument. This will add the employee to the list of employees inthe hospital.
 
 
-print(john)
-print(alice)
 
-
-
-print(myHospital.count_employees()) 
-
-#this is printing the list of employees in the hospital. It will print the memory address of the objects, not the names of the employees. This is because we have not defined a __str__ method for the Employee class. We will do that next.
-doctor=input("Enter the name of the doctor you want to search for: ") #this is asking the user to enter the name of the doctor they want to search for. It will store the input in the variable doctor.
-found_doctor=myHospital.search_for_doctor(doctor) #this is calling the search_for_doctor method of the Hospital class, and passing in the name of the doctor as an argument.
-if found_doctor is not None: #this is checking if the doctor was found. If it was found, it will print the name and specialty of the doctor. If it was not found, it will print "Doctor not found."
-    print('doctor has been found, his name is',found_doctor.name,'and his specialty is',found_doctor.specialty)
-else:
-    print('Doctor not found.')
 #TODO 👍 Create another subclass for Nurse
 #TOTO add age to the base class , as both burses and Drs have age
 #TODO 🥳 Add a function at the hostpital class, to return the count of employees
@@ -141,4 +128,19 @@ else:
 
 
 
+print(f"Dr john details: {john}")
+print(f"Nurse alice details: {alice}")
 
+print(f"number of Totalemployees {myHospital.count_employees()}") 
+print(f"number of doctors {myHospital.count_doctors()}") 
+print(f"number of nurses {myHospital.count_nurses()}") 
+      
+print("all doctors listed in the hospital:") 
+myHospital.print_doctors()
+
+doctor=input("Enter the name of the doctor you want to search for: ") #this is asking the user to enter the name of the doctor they want to search for. It will store the input in the variable doctor.
+found_doctor=myHospital.search_for_doctor(doctor) #this is calling the search_for_doctor method of the Hospital class, and passing in the name of the doctor as an argument.
+if found_doctor is not None: #this is checking if the doctor was found. If it was found, it will print the name and specialty of the doctor. If it was not found, it will print "Doctor not found."
+    print('doctor has been found, his name is',found_doctor.name,'and his specialty is',found_doctor.specialty)
+else:
+    print('Doctor not found.')
