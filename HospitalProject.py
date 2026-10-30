@@ -1,5 +1,5 @@
 class Hospital:
-    def __init__(self,name,employees=[]):   # innit is a short hand for initialize, it is a constructor method that is called when an object is created. It takes in the name of the hospital and a list of employees as parameters. The list of employees is optional and defaults to an empty list if not provided.
+    def _init_(self,name,employees=[]):   # innit is a short hand for initialize, it is a constructor method that is called when an object is created. It takes in the name of the hospital and a list of employees as parameters. The list of employees is optional and defaults to an empty list if not provided.
         self.name=name                      # you cant have mul
         self.employees=[]
     
@@ -64,7 +64,7 @@ class Hospital:
 ##################################################################################
 ##################################################################################
 class Employee:
-    def __init__(self,parameterName,age):
+    def _init_(self,parameterName,age):
         self.name=parameterName
         self.age=age
 
@@ -73,22 +73,22 @@ class Doctor(Employee):
     A class representing a doctor, which is a subclass of Employee.
     this is clear as employee is in the brackets, this means that doctor is a subclass of employee, and inherits all the methods and attributes of the employee class.
     '''
-    def __init__(self,parameterName,parameterSpecialty,age):
+    def _init_(self,parameterName,parameterSpecialty,age):
         '''
         Initializes a Doctor object with a name and specialty.'''
-        super().__init__(parameterName,age)
+        super()._init_(parameterName,age)
         self.specialty=parameterSpecialty
     
-    def __str__(self):
+    def _str_(self):
         return f"Dr Name: {self.name}, Specialty: {self.specialty}, Age: {self.age}"
 
 class Nurse(Employee):
     '''A class representing a nurse which is a subclass of Employee'''
-    def __init__(self,parameterName,age):
+    def _init_(self,parameterName,age):
         '''Initializes a Nurse object with a name.'''
-        super().__init__(parameterName,age)
+        super()._init_(parameterName,age)
 
-    def __str__(self):
+    def _str_(self):
         return f"Nurse Name: {self.name}, Age: {self.age}"
 
 myHospital=Hospital("St Georges Hospital", []) #this is the hospital object, it has a name and a list of employees. The list of employees is empty at the moment.
@@ -111,10 +111,8 @@ myHospital.add_employee(bob) #this is calling the add_employee method of the Hos
 myHospital.add_employee(malachi) #this is calling the add_employee method of the Hospital class, and passing in the employee object as an argument. This will add the employee to the list of employees inthe hospital.
 myHospital.add_employee(william) #this is calling the add_employee method of the Hospital class, and passing in the employee object as an argument. This will add the employee to the list of employees inthe hospital.
 
-
-
 #TODO 👍 Create another subclass for Nurse
-#TOTO 👍 add age to the top class , as both nurses and Drs have age
+#TOTO add age to the base class , as both burses and Drs have age
 #TODO 🥳 Add a function at the hostpital class, to return the count of employees
 #TODO 🥳 Add a function at the hostpital class, to return the count of Drs
 #TODO 🥳 Add a function at the hostpital class, to return the count of Nurses
@@ -122,8 +120,8 @@ myHospital.add_employee(william) #this is calling the add_employee method of the
 #TODO 🥳 Add a function at the hostpital class, to print Nurses only
 #TODO 🥳 search for a doctor by name. The search should ignore capitals (“smith” matches “Smith”), only match doctors, and give back the doctor if found or None if not.
 #TODO 🥳 Every method needs a docstring explaining what it does.
-#TODO 🥳 use __str__ so when you do print(drDave) it prints something human readable
-#TODO .... for extra points use  __repr__   so when you print(employees)  it prints somethings comparable to obecjts
+#TODO 🥳 use _str_ so when you do print(drDave) it prints something human readable
+#TODO .... for extra points use  _repr_   so when you print(employees)  it prints somethings useful
 
 
 
