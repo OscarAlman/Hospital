@@ -1,5 +1,6 @@
+import time
 
-
+time.start()
 Mygrid=[
    [ '-','-','-'],
    [ '-','-','-'],
@@ -15,4 +16,8 @@ while True:
     print(Mygrid)
 
 
+time.stop()
 
+printf(
+    
+)
